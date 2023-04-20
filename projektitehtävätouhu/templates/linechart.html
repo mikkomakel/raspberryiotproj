@@ -22,9 +22,9 @@
         function drawChart(s) {
           var data = new google.visualization.DataTable();
             data.addColumn('number', 'Time');
-            data.addColumn('number', 'X');
-            data.addColumn('number', 'y');
-            data.addColumn('number', 'z');
+            data.addColumn('number', 'CPU käyttö%');
+            data.addColumn('number', 'RAM käyttö%');
+            data.addColumn('number', 'CPU lämpötila');
             data.addRows(s);
   
           var options = {
@@ -38,7 +38,7 @@
           chart.draw(data, options);
         }
 
-        // https://developers.google.com/chart/interactive/docs/gallery/table 
+        /** https://developers.google.com/chart/interactive/docs/gallery/table 
         function drawTable(s) {
           var data = new google.visualization.DataTable();
           data.addColumn('number', 'Time');
@@ -50,7 +50,7 @@
           var table = new google.visualization.Table(document.getElementById('table_div'));
   
           table.draw(data, {showRowNumber: true, width: '100%', height: '100%'});
-        }
+        }*/
       </script>
     </head>
     <body>
